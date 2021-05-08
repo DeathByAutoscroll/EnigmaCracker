@@ -3,8 +3,9 @@ To do list:
 Encryption/Decryption -  
 Get and process message [O]  
 Implement plugboard [O]  
-Get plugboard settings in runtime [X]  
-Add rotors/reflector []  
+Get plugboard settings in runtime [O]  
+Add rotor manager [O]  
+Add rotors/reflector [X]  
 Get rotor settings []  
 Attempt to optimise []  
 Verify everything works as intended []  
