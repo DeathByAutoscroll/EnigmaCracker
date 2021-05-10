@@ -5,10 +5,14 @@ Get and process message [O]
 Implement plugboard [O]  
 Get plugboard settings in runtime [O]  
 Add rotor manager [O]  
-Add rotors/reflector [X]  
-Get rotor settings []  
+Add rotors/reflector [O]  
+Get rotor settings [X]  
 Attempt to optimise []  
 Verify everything works as intended []  
+  
+  
+NOTHING WORKS AS INTENDED - Can't put the output back though to get the input.  
+  
   
 Cracker -  
 Implement plugboard contradiction tester []  

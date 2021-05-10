@@ -1,13 +1,17 @@
 #include "Rotor.h"
 
-Rotor::Rotor(std::string spaghetti) {
-	for (int i = 0; i < 26; ++i) {
-		rotorPairs[i] = spaghetti[i];
-	}
+Rotor::Rotor() {
+	
 }
 
 Rotor::~Rotor() {
 
+}
+
+void Rotor::setSpaghetti(std::string spaghetti) {
+	for (int i = 0; i < 26; ++i) {
+		rotorPairs[i] = spaghetti[i];
+	}
 }
 
 char Rotor::encode(char input) {
@@ -24,6 +28,6 @@ char Rotor::encode(char input) {
 void Rotor::incPos() {
 	++position;
 	if (position > 25) {
-		position -= 26;
+		position % 26;
 	}
 }

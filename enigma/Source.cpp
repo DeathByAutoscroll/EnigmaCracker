@@ -37,6 +37,33 @@ int main() {
 	}
 	Plugboard board(input);
 	RotorManager man;
+	man.setRotors();
+
+	for (int i = 0; i < 3; ++i) {
+		verified = false;
+		while (!verified) {
+			verified = true;
+			std::cout << "Please insert which rotor you would like to use in position " << i + 1 << std::endl;
+			std::getline(std::cin, input);
+
+			for (int j = 0; j < i; ++j) {
+				if (std::stoi(input) < 1 || std::stoi(input) > 5){
+					std::cout << "Error: You can only use rotors 1 to 5\n";
+					verified = false;
+					break;
+				}
+				else if (std::stoi(input) - 1 == man.getRotor(j)) {
+					std::cout << "Error: You can't have the same rotor twice!\n";
+					verified = false;
+					break;
+				}
+			}
+
+			if (verified) {
+				man.addRotor(i, std::stoi(input) - 1);
+			}
+		}
+	}
 
 	std::cout << "Please insert the message you would like to encrypt/decrypt.\n";
 	std::getline(std::cin, input); //this is used to capture spaces
@@ -47,9 +74,9 @@ int main() {
 
 		if ((int)letter > 64 && (int)letter < 91) {
 			//Functions to manipulate letters
-			//letter = board.swapLetters(letter);
+			letter = board.swapLetters(letter);
 			letter = man.encrypt(letter);
-			//letter = board.swapLetters(letter);
+			letter = board.swapLetters(letter);
 		}
 		else if (letter == ' ') {
 			//adds a space to the output - not accurate but looks nicer
