@@ -1,6 +1,5 @@
 # Enigma 1 machine in C++.
-Progress: This now can encrypt/decrypt an arbitrary string of characters.  
--As of this commit, only the back rotor spins and users are unable to select positions of the rotors.
+Progress: Simulating an Enigma 1 machine is completely done. Cracker to be coded in a week or so when I have free time.
 
 To do list:  
 Encryption/Decryption -  
