@@ -7,6 +7,7 @@ protected:
 	char rotorPairs[26];
 	int position = 0;
 	int rotPos;
+	bool needRotate;
 
 public:
 	//constructor
@@ -14,8 +15,11 @@ public:
 	~Rotor();
 
 	//functions
-	void setSpaghetti(std::string);
+	void setSpaghetti(std::string, int);
 	char encode(char, bool);
 	void incPos();
+	bool getRotate();
+	void setPos(int);
+	void setOffset(int);
 
 };

@@ -8,10 +8,11 @@ Rotor::~Rotor() {
 
 }
 
-void Rotor::setSpaghetti(std::string spaghetti) {
+void Rotor::setSpaghetti(std::string spaghetti, int notch) {
 	for (int i = 0; i < 26; ++i) {
 		rotorPairs[i] = spaghetti[i];
 	}
+	rotPos = notch;
 }
 
 char Rotor::encode(char input, bool back) {
@@ -49,4 +50,22 @@ void Rotor::incPos() {
 	if (position > 25) {
 		position = position % 26;
 	}
+
+	needRotate = false;
+
+	if (position == rotPos) {
+		needRotate = true;
+	}
+}
+
+bool Rotor::getRotate() {
+	return needRotate;
+}
+
+void Rotor::setPos(int pos) {
+	position = pos;
+}
+
+void Rotor::setOffset(int notch) {
+	rotPos = notch;
 }
