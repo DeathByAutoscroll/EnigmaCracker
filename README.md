@@ -1,4 +1,7 @@
 # enigmaMachineEncoder-cracker
+Progress: This now can encrypt/decrypt an arbitrary string of characters.  
+-As of this commit, only the back rotor spins and users are unable to select positions of the rotors.
+
 To do list:  
 Encryption/Decryption -  
 Get and process message [O]  
@@ -7,12 +10,8 @@ Get plugboard settings in runtime [O]
 Add rotor manager [O]  
 Add rotors/reflector [O]  
 Get rotor settings [X]  
-Attempt to optimise []  
+Implement proper rotor rotation [X]    
 Verify everything works as intended []  
-  
-  
-NOTHING WORKS AS INTENDED - Can't put the output back though to get the input.  
-  
   
 Cracker -  
 Implement plugboard contradiction tester []  

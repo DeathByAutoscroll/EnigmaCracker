@@ -4,7 +4,6 @@
 #include "RotorManager.h"
 
 int main() {
-
 	std::string input;
 	std::string output = "";
 	char letter;

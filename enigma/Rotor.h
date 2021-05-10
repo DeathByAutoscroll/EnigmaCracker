@@ -15,7 +15,7 @@ public:
 
 	//functions
 	void setSpaghetti(std::string);
-	char encode(char);
+	char encode(char, bool);
 	void incPos();
 
 };
