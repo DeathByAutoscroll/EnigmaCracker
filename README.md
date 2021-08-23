@@ -1,5 +1,5 @@
 # Enigma 1 machine in C++.
-Progress: Simulating an Enigma 1 machine is completely done. Cracker to be coded in a week or so when I have free time.
+Progress: Simulating an Enigma 1 machine is completely done.
 
 To do list:  
 Encryption/Decryption -  
